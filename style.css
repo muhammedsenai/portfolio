@@ -4,6 +4,23 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   background: #fff;
   color: #111;
+  <head>
+  ...
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
 }
 nav {
   position: fixed;
