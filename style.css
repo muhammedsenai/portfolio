@@ -15,6 +15,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Navigasyon */
@@ -51,7 +52,7 @@ nav a {
 
 .hero img {
   width: auto;
-  height: 60px;  /* Küçük logo sadece sol üstte */
+  height: 60px;
   position: fixed;
   top: 10px;
   left: 10px;
@@ -60,7 +61,7 @@ nav a {
 }
 
 .hero-text {
-  margin-top: 100px; /* Navbar ve logo altına boşluk */
+  margin-top: 100px;
   text-align: center;
   color: #111;
 }
@@ -107,12 +108,38 @@ nav a {
   padding: 2rem;
 }
 
+/* Her bir proje kutusu */
+.project {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ortala */
+  text-align: center; /* Metin ortala */
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
 .project img,
 .project video {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 6px;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+}
+
+.project h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111;
 }
 
 /* Collage Section */
@@ -155,16 +182,4 @@ nav a {
   grid-row: span 2;
 }
 
-.collage-grid img:nth-child(5) {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background: #f9f9f9;
-  margin-top: 3rem;
-}
+.collage-grid img:nth-child(5
