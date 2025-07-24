@@ -17,6 +17,16 @@ img {
   height: auto;
 }
 
+/* Sol üstteki logo */
+.logo {
+  position: fixed;    /* sayfada sabit kalsın */
+  top: 10px;          /* üstten 10px boşluk */
+  left: 10px;         /* soldan 10px boşluk */
+  max-width: 100px;   /* maksimum genişlik */
+  height: auto;
+  z-index: 1000;      /* diğer içeriklerin üstünde */
+}
+
 /* Navigasyon */
 nav {
   position: fixed;
@@ -48,11 +58,13 @@ nav a {
   margin-top: 60px;
 }
 
+/* Büyük kapak resmi kaldırıldığı için bu kısım gerekmiyor
 .hero img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
 }
+*/
 
 .hero-text {
   position: absolute;
