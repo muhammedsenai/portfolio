@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Director Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="assets/hero.jpg" alt="Hero" />
+    <div class="hero-text">
+      <h1>Creative Director</h1>
+      <p>Visual Concepts & Motion Design</p>
+    </div>
+  </header>
+
+  <!-- Filter Buttons -->
+  <section id="work">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="motion">Motion</button>
+      <button class="filter-btn" data-filter="ux">UX</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid">
+      <div class="project" data-category="branding">
+        <a href="#">
+          <img src="assets/project1.jpg" alt="Branding Project" />
+          <h2>Brand Identity</h2>
+        </a>
+      </div>
+      <div class="project" data-category="motion">
+        <a href="#">
+          <video autoplay muted loop playsinline>
+            <source src="assets/motion1.mp4" type="video/mp4" />
+          </video>
+          <h2>Motion Design</h2>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Creative Director</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
