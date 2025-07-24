@@ -17,16 +17,6 @@ img {
   height: auto;
 }
 
-/* Sol üstteki logo */
-.logo {
-  position: fixed;    /* sayfada sabit kalsın */
-  top: 10px;          /* üstten 10px boşluk */
-  left: 10px;         /* soldan 10px boşluk */
-  max-width: 100px;   /* maksimum genişlik */
-  height: auto;
-  z-index: 1000;      /* diğer içeriklerin üstünde */
-}
-
 /* Navigasyon */
 nav {
   position: fixed;
@@ -35,7 +25,7 @@ nav {
   background: white;
   padding: 1rem 2rem;
   border-bottom: 1px solid #eee;
-  z-index: 999; /* logo üstünde olmasın */
+  z-index: 1000;
 }
 
 nav ul {
@@ -56,14 +46,23 @@ nav a {
 /* Hero alanı */
 .hero {
   position: relative;
-  margin-top: 120px; /* Üst boşluk: logo ve nav altına inmesi için */
+  margin-top: 60px;
+}
+
+.hero img {
+  width: auto;
+  height: 60px;  /* Küçük logo sadece sol üstte */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  object-fit: contain;
+  z-index: 1001;
 }
 
 .hero-text {
-  position: relative;
-  color: #111; /* Beyaz yerine siyah daha okunur olabilir */
+  margin-top: 100px; /* Navbar ve logo altına boşluk */
   text-align: center;
-  padding: 2rem;
+  color: #111;
 }
 
 .hero-text h1 {
@@ -74,6 +73,7 @@ nav a {
 .hero-text p {
   font-size: 1.2rem;
   opacity: 0.8;
+  margin-top: 0.5rem;
 }
 
 /* Filtre butonları */
@@ -113,6 +113,51 @@ nav a {
   height: auto;
   display: block;
   border-radius: 6px;
+}
+
+/* Collage Section */
+#collage {
+  padding: 2rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+#collage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 10px;
+}
+
+.collage-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.collage-grid img:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.collage-grid img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.collage-grid img:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 /* Footer */
